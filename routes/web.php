@@ -11,10 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
 
     Route::resource('energy', 'EnergyController');
     Route::resource('fuel', 'FuelController');
     Route::resource('notes', 'NotesController');
-    
+
+
+
+    Route::get('/', 'AdminController@index');
