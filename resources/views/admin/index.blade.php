@@ -75,6 +75,16 @@
         </div>
     </div>
 
+
+
+        <!-- Первый блок -->        
+        <div class="col-4 ml-auto mr-3 bg-success" style="height: 200px;"></div>
+        <!-- Второй блок --> 
+        <div class="col-4 mr-auto ml-3 bg-danger" style="height: 200px;"></div>
+  
+
+
+
    
 </main>
 </body>
