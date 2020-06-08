@@ -9,39 +9,37 @@
 
                     <ul class="list-group">
                         <li class="list-group-item"><a href="/notes">Главная страница</a></li>
-                        <li class="list-group-item"><a href="notes/create">Новая запись</a></li>
-                        <li class="list-group-item">Dapibus ac facilisis in</li>
-                        <li class="list-group-item">Morbi leo risus</li>
-                        <li class="list-group-item">Porta ac consectetur ac</li>
-                        <li class="list-group-item">Vestibulum at eros</li>
+
+                       
                     </ul>
-
-
-
                 </div>
-
-
             </div>
             <div class="col-sm-9">
                 <h2  >admindashboard</h2>
 
-                <div class="dump border rounded  shadow "   >
+                <div class="dump border rounded  shadow ">
 
-                    <div class="alert alert-success" role="alert">Новая запись</div>
+<form   action="{{ url('/notes') }} method="post">
+    {{ csrf_field() }}
+    <div class="alert alert-success" role="alert">Новая запись</div>
 
                     <div class="form-group">
                         <label for="usr">Заголовок:</label>
-                        <input type="text" class="form-control" id="usr">
+                        <input type="text" class="form-control" id="usr" name="header" required="">
                     </div>
 
                     <div class="form-group">
                         <label for="comment">Текст записи:</label>
-                        <textarea class="form-control" rows="5" id="comment"></textarea>
+                        <textarea class="form-control" rows="5" id="comment" name="text"   required=""></textarea>
                     </div>
+                     <hr>
+                    <button type="submit" class="btn btn-primary">Добавить запись</button>
+
+</form>
+                    
 
 
-                    <hr>
-                    <button type="button" class="btn btn-primary">Добавить запись</button>
+                   
                 </div>
 
             </div>

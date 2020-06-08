@@ -1,6 +1,24 @@
 /* Show it is fixed to the top */
-body {
-  min-height: 75rem;
-  padding-top: 4.5rem;
+
+
+html,
+body,
+header,
+#intro {
+  height: 100%;
+  padding-top: 30px;
+
+  
 }
 
+#intro {
+  background: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full%20page/img%20%283%29.jpg")no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.container{
+
+}

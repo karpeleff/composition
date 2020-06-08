@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Note;
 
 class NotesController extends Controller
 {
@@ -13,7 +14,8 @@ class NotesController extends Controller
      */
     public function index()
     {
-        return view('notes.index');
+        $data = Note::paginate(4 );
+        return view('notes.index')->with('data', $data);
     }
 
     /**
@@ -34,7 +36,13 @@ class NotesController extends Controller
      */
     public function store(Request $request)
     {
+       //dd($request);
+        $record = new Note;
+        $record->header = $request->header;
+        $record->text = $request->text;
+        $record->save();
 
+        return view('notes.create');
     }
 
     /**
@@ -45,7 +53,8 @@ class NotesController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = Note::find($id);
+        return view('notes.show')->with('data', $data);
     }
 
     /**
@@ -56,7 +65,8 @@ class NotesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = Note::find($id);
+        return view('notes.edit')->with('data', $data);
     }
 
     /**
@@ -68,7 +78,12 @@ class NotesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $record = Note::find($id);
+        $record->header = $request->header;
+        $record->text = $request->text;
+        $record->save();
+        return redirect()->route('notes.index');
+        //return  $this->index();
     }
 
     /**
@@ -79,6 +94,7 @@ class NotesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $record = Note::find($id);
+        $record->delete();
     }
 }
