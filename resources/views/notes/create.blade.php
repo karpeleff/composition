@@ -1,25 +1,10 @@
 @extends('layouts.app')
 @section('content')
-    <div class="container" style="margin-top:30px">
-        <div class="row">
-            <div class="col-sm-3">
-                <h2>menu</h2>
 
-                <div class="dump  border  rounded  shadow ">
-
-                    <ul class="list-group">
-                        <li class="list-group-item"><a href="/notes">Главная страница</a></li>
-
-                       
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-9">
-                <h2  >admindashboard</h2>
 
                 <div class="dump border rounded  shadow ">
 
-<form   action="{{ url('/notes') }} method="post">
+<form   action="/notes" method="post">
     {{ csrf_field() }}
     <div class="alert alert-success" role="alert">Новая запись</div>
 

@@ -14,7 +14,8 @@ class NotesController extends Controller
      */
     public function index()
     {
-        $data = Note::paginate(4 );
+      /*  $data = Note::paginate(4);*/
+        $data = Note::all();
         return view('notes.index')->with('data', $data);
     }
 
@@ -96,5 +97,18 @@ class NotesController extends Controller
     {
         $record = Note::find($id);
         $record->delete();
+        return redirect()->route('notes.index');
+
+    }
+
+    public function  search(Request $request)
+    {
+        $seek = $request->input('search');
+        $data   =  Note::where('header', 'like','%' . $seek . '%')
+                        ->orWhere ('text', 'like','%' . $seek . '%')
+                        ->get();
+
+        return view('notes.index')->with('data', $data);
     }
 }
+

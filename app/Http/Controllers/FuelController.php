@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Fuel;
+
 class FuelController extends Controller
 {
     /**
@@ -13,7 +15,9 @@ class FuelController extends Controller
      */
     public function index()
     {
-        //
+        $data =
+        Fuel::all();
+        return view('fuel.index')->with('data', $data);
     }
 
     /**
@@ -23,7 +27,7 @@ class FuelController extends Controller
      */
     public function create()
     {
-        //
+        return view('fuel.create');
     }
 
     /**

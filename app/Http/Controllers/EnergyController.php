@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Energy;
+
+use App\Http\Resources\Energy as EnergyResources;
+
 class EnergyController extends Controller
 {
     /**
@@ -13,7 +17,14 @@ class EnergyController extends Controller
      */
     public function index()
     {
-        //
+        //echo "test";
+        /*$data = new Energy;
+        $data->date = 578434;
+        $data->count = 54565;
+        $data->save();*/
+        $energy = Energy::all();
+        return Energyresources::collection($energy);
+
     }
 
     /**

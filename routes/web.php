@@ -11,7 +11,7 @@
 |
 */
 
-
+    Route::post('/notes/search','NotesController@search');
     Route::resource('energy', 'EnergyController');
     Route::resource('fuel', 'FuelController');
     Route::resource('notes', 'NotesController');

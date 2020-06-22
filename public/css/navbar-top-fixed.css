@@ -18,7 +18,13 @@ header,
   -o-background-size: cover;
   background-size: cover;
 }
+.dump {
 
+  height: auto;
+  margin: 15px;
+  padding: 15px;
+}
 .container{
-
+  margin-top:30px;
+  background-image:url('/img/bg5.png');
 }
