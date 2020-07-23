@@ -21,6 +21,7 @@
     },
     "dependencies": {
         "bootstrap": "^4.5.0",
+        "element-ui": "^2.13.2",
         "moment": "^2.26.0",
         "vuejs-datetimepicker": "^1.1.13"
     }

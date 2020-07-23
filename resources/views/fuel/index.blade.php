@@ -1,6 +1,9 @@
 @extends('layouts.fuel')
 @section('content')
-
+</div>
+<div  id="app"  >
+    <example-component></example-component>
+</div>
 
                 <div class="dump border rounded  shadow "   >
 
@@ -11,10 +14,7 @@
                         @else
                             Все записки
                         @endif
-                    </div>
-                    <div  id="app"  >
-                        <example-component></example-component>
-                    </div>
+
 
 
                     <br>
@@ -25,7 +25,7 @@
         </div>
     </div>
 
-    
+<script src="{!! asset('js/app.js') !!}"></script>
     </body>
     </html>
 

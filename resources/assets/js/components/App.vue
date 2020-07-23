@@ -1,10 +1,10 @@
 <template>
-   <div>я тестовый компонент</div>
+    <div>app component</div>
 </template>
 
 <script>
     export default {
-        name: "ExampleComponent.vue"
+        name: "App"
     }
 </script>
 

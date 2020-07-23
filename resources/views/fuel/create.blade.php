@@ -7,7 +7,10 @@
 <form   action="/notes" method="post">
     {{ csrf_field() }}
     <div class="alert alert-success" role="alert">Запуск Дизель генератора</div>
+<div id="app" >
+  <dtpicker></dtpicker>
 
+</div>
                     <div class="form-group">
                         <label for="usr">Заголовок:</label>
                         <input type="text" class="form-control" id="usr" name="header" required="">
@@ -53,6 +56,7 @@
             </div>
         </div>
     </div>
+                <script src="{!! asset('js/app.js') !!}"></script>
     </body>
     </html>
 

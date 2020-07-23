@@ -11,7 +11,7 @@
     <script src="https://kit.fontawesome.com/5b60663aaf.js" crossorigin="anonymous"></script>
    {{-- <script src="js/vue.js" ></script>
     <script src="js/script.js" ></script>--}}
-    <script src="{!! asset('js/app.js') !!}"></script>
+
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="{{asset('css/navbar-top-fixed.css') }}"rel="stylesheet" type="text/css" >
 

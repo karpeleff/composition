@@ -16,6 +16,10 @@
     Route::resource('fuel', 'FuelController');
     Route::resource('notes', 'NotesController');
 
-
+Route::get('/doc', 'DocsController@index');
 
     Route::get('/', 'AdminController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
