@@ -18,6 +18,8 @@
 
 Route::get('/doc', 'DocsController@index');
 
+Route::get('/createdoc', 'DocsController@create');
+
     Route::get('/', 'AdminController@index');
 
 Auth::routes();
